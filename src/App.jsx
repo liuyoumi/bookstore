@@ -12,9 +12,7 @@ import {
   Table,
   Textarea
 } from "tdesign-react";
-import {create, remove, setList, sort, update} from "./store/slice/book.js";
-
-let originalList = null;
+import {create, remove, sort, update} from "./store/slice/book.js";
 
 function App() {
   const {list} = useSelector((state) => state.book);
@@ -89,14 +87,7 @@ function App() {
 
   // 排序筛选操作
   const handleSortChange = (value) => {
-    if (!originalList) {
-      originalList = list;
-    }
-    if (!value) {
-      originalList && dispatch(setList(originalList));
-    } else {
-      dispatch(sort(value));
-    }
+    dispatch(sort(value));
     setSortKey(value);
   }
 

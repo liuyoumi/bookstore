@@ -1,7 +1,7 @@
 import {createRoot} from 'react-dom/client'
 
 // global style
-import "./styles/index.css"
+import "./style/index.css"
 
 // state manage
 import {Provider} from 'react-redux'

@@ -66,9 +66,6 @@ const bookSlice = createSlice({
       if (index > -1) {
         state.list[index] = {...state.list[index], ...payload};
       }
-    },
-    setList(state, {payload}) {
-      state.list = JSON.parse(JSON.stringify(payload));
     }
   }
 })
